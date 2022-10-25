@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Truyen extends Model
 {
     use HasFactory;
+
+    public $timestamps = false;
+    protected $fillable = [
+        'tentruyen', 'tomtat', 'hinhanh', 'kichhoat', 'slugtruyen', 'danhmuc_id'
+    ];
+    protected $primarykey = 'id';
+    protected $table = 'truyen';
+
+    public function danhmuctruyen() {
+        return $this->belongsTo('App\Models\DanhmucTruyen', 'danhmuc_id','id');
+    }
 }

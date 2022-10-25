@@ -31,7 +31,7 @@
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Slug danh mục</label>
-                <input type="" class="form-control" name="slugdanhmuc" value="{{old('slugdanhmuc')}}" id="convert_slug" placeholder="Mô tả">
+                <input type="" class="form-control" name="slugdanhmuc" value="{{old('slugdanhmuc')}}" id="convert_slug" placeholder="Slug danh mục">
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Mô tả</label>
