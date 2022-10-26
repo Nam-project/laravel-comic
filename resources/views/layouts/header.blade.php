@@ -28,6 +28,11 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>TRUYỆN</span></a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('chapter.index') }}">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>CHAPTER</span></a>
+            </li>
 
             <!-- Sidebar Toggler (Sidebar) -->
             {{-- <div class="text-center d-none d-md-inline">
