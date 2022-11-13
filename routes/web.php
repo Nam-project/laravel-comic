@@ -5,6 +5,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DanhMucController;
 use App\Http\Controllers\TruyenController;
 use App\Http\Controllers\ChapterController;
+use App\Http\Controllers\IndexController;
+
 
 
 /*
@@ -18,13 +20,21 @@ use App\Http\Controllers\ChapterController;
 |
 */
 
-Route::get('/', function () {
-    return view('layout');
-});
+Route::get('/', [IndexController::class, 'home']);
+Route::get('/doc-truyen/{slug}', [IndexController::class, 'doctruyen']);
+Route::get('/danh-muc/{slug}', [IndexController::class, 'danhmuc']);
+Route::get('/xem-chapter/{id}/{slug}', [IndexController::class, 'chapter']);
+Route::get('/tim-kiem', [IndexController::class, 'search']);
+Route::get('/search-auto', [IndexController::class, 'searchAuto']);
+
+
+
+
+
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+// Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::resource('/danhmuc', DanhMucController::class);
 Route::resource('/truyen', TruyenController::class);
 Route::resource('/chapter', ChapterController::class);

@@ -9,7 +9,7 @@
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Danh Mục</h1>
+        <h1 class="h3 mb-0 text-gray-800">Liệt kê chapter</h1>
         <a href="{{ route('chapter.create') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">Thêm chapter</a>
     </div>
 
@@ -17,41 +17,41 @@
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Tên danh mục</th>
-                <th scope="col">Slug danh mục</th>
-                <th scope="col">Mô tả</th>
+                <th scope="col">Tên chapter</th>
+                <th scope="col">Slug chapter</th>
+                <th scope="col">Thuộc truyện</th>
                 <th scope="col">Trạng thái</th>
                 <th scope="col">Quản lý</th>
             </tr>
         </thead>
         <tbody>
-            {{-- @foreach ($danhmuctruyen as $key => $danhmuc)
+            @foreach ($chapter as $key => $chap)
             <tr>
                 <th scope="row">{{$key}}</th>
-                <td>{{$danhmuc->tendanhmuc}}</td>
-                <td>{{$danhmuc->slugdanhmuc}}</td>
-                <td>{{$danhmuc->mota}}</td>
+                <td>{{$chap->tieude}}</td>
+                <td>{{$chap->slug_chapter}}</td>
+                <td>{{$chap->truyen->tentruyen}}</td>
                 <td>
-                    @if ($danhmuc->kichhoat == 0)
+                    @if ($chap->kichhoat == 0)
                         <span class="text text-success">Kích hoạt</span>
                     @else
                     <span class="text text-danger">Không kích hoạt</span>
                     @endif    
                 </td>
                 <td class="form-row">
-                    <a href="{{route('danhmuc.edit', [$danhmuc->id])}}" class="btn btn-info btn-circle btn-sm mx-2">
+                    <a href="{{route('chapter.edit', [$chap->id])}}" class="btn btn-info btn-circle btn-sm mx-2">
                         <i class="fa-regular fa-pen-to-square"></i>
                     </a>
-                    <form action="{{route('danhmuc.destroy', [$danhmuc->id])}}" method="POST">
+                    <form action="{{route('chapter.destroy', [$chap->id])}}" method="POST">
                         @method('DELETE')
                         @csrf
-                        <button onclick="return confirm('Bạn có muốn xóa danh mục này hay không ?')" class="btn btn-danger btn-circle btn-sm">
+                        <button onclick="return confirm('Bạn có muốn xóa chapter này hay không ?')" class="btn btn-danger btn-circle btn-sm">
                             <i class="fas fa-trash"></i>
                         </button>
                     </form>
                 </td>
             </tr>
-            @endforeach --}}
+            @endforeach
         </tbody>
     </table>
 

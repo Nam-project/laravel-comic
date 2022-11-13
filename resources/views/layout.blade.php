@@ -1,26 +1,239 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Truyện</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Truyện</title>
 
-        <!-- Styles -->
-        <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.dark\:text-gray-500{--tw-text-opacity:1;color:#6b7280;color:rgba(107,114,128,var(--tw-text-opacity))}}
-        </style>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
-        <style>
-            body {
-                font-family: 'Nunito', sans-serif;
-            }
-        </style>
-    </head>
-    <body>
-        
-    </body>
+    <!-- Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    {{-- <link rel="stylesheet" href="{{ asset('public/css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/js/app.js') }}"> --}}
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="{{ asset('public/css/grid.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('public/css/style.css') }}">
+
+    <style>
+
+    </style>
+</head>
+
+
+<body>
+    <div class="main">
+        <!---------Header--------->
+        <header class="header">
+            <div class="grid wide">
+                <div class="header-width-search row no-gutters">
+                    <div class="header__logo col l-2 m-1 c-1">
+                        <a href="{{ url('/') }}" class="header__logo-link">
+                            <span>N</span>COMIC
+                        </a>
+                        <a href="{{ url('/') }}" class="header__logo-mc">
+                            <img src="{{ asset('public/uploads/images/logo.png') }}" />
+                        </a>
+                    </div>
+                    <div class="header__search col l-7 m-10 c-10">
+                        <form class="header__search--f" action="{{ url('tim-kiem') }}" method="GET">
+                            <input class="header__search--input" id="search-input" autocomplete='off' type="search"
+                                name="search" id="Search" placeholder="Search">
+                            <button class="header__search--btn" type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </form>
+                        <div class="search-autocomplete">
+                            {{-- auto search --}}
+                        </div>
+                    </div>
+
+
+                    <div class="header__register-login col l-3 m-0 c-0">
+                        <a href="" class="header__register">Sign Up</a>
+                        <a href="" class="header__login">Sign In</a>
+                    </div>
+                    {{-- btn mobile --}}
+                    <label for="nav__mobile-input" class="menu-btn col l-0 m-1 c-1">
+                        <i class="fa-solid fa-bars"></i>
+                    </label>
+                </div>
+            </div>
+            <div class="header__nav l-12 m-0 c-0">
+                <div class="grid wide">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item header__nav-item-cotegory">
+                            <span class="header__nav-cotegory">Thể loại</span>
+                            <i class="fa-solid fa-caret-down"></i>
+                            <ul class="header__nav-cotegory-list">
+                                <div class="grid wide list-wrap">
+                                    @foreach ($danhmuc as $key => $dm)
+                                        @if ($dm->kichhoat == 0)
+                                            <a href="{{ url('danh-muc/' . $dm->slugdanhmuc) }}">
+                                                <li class="header__nav-cotegory-item">{{ $dm->tendanhmuc }}</li>
+                                            </a>
+                                        @endif
+                                    @endforeach
+
+                                </div>
+                            </ul>
+                        </li>
+                        <li class="header__nav-item">Xếp hạng</li>
+                        <li class="header__nav-item">Theo dõi</li>
+                        <li class="header__nav-item">Lịch sử</li>
+                    </ul>
+                </div>
+            </div>
+            <!---------Nav mobile--------->
+            <input type="checkbox" name="" class="nav__input" id="nav__mobile-input">
+            <label for="nav__mobile-input" class="nav__overlay"></label>
+            <nav class="nav__mobile">
+                <label for="nav__mobile-input" class="nav__mobile-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </label>
+                <ul class="nav__mobile-list">
+                    <li class="nav__mobile-logo">
+                        <span>N</span>COMIC
+                    </li>
+                    <li class="nav__mobile-link"><a class="btn-cotegory" href="">Thể loại<i
+                                class="fa-solid fa-caret-down"></i></a>
+                        <div class="hover-cotegory">
+                            <ul class="nav__mobile-cotegory ">
+                                <li class="nav__mobile-cotegory-item">Manhua</li>
+                                <li class="nav__mobile-cotegory-item">Manga</li>
+                                <li class="nav__mobile-cotegory-item">Manhwa</li>
+                                <li class="nav__mobile-cotegory-item">Manhua</li>
+                                <li class="nav__mobile-cotegory-item">Manga</li>
+                                <li class="nav__mobile-cotegory-item">Manhwa</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav__mobile-link">Xếp hạng</li>
+                    <li class="nav__mobile-link">Theo dõi</li>
+                    <li class="nav__mobile-link">Lịch sử</li>
+                    <li class="nav__mobile-link">Đăng nhập</li>
+                    <li class="nav__mobile-link">Đăng xuất</li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="content">
+            <div class="grid wide">
+                <!---------Slide--------->
+                @yield('slide')
+
+                <!---------Truyện mới--------->
+                @yield('content')
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="line"></div>
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-6">
+                        <div class="header__logo">
+                            <a href="{{ url('/') }}" class="header__logo-link">
+                                <span>N</span>COMIC
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col l-6"></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 2,
+            spaceBetween: 10,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            autoplay: {
+                delay: 5000,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 5,
+                    spaceBetween: 50,
+                },
+            },
+        });
+
+        const $ = document.querySelector.bind(document)
+
+        // auto search
+        const searchInput = document.getElementById('search-input')
+        const autoSearch = $('.search-autocomplete')
+
+        searchInput.addEventListener('keyup', () => {
+            let input = searchInput.value
+            if (input.length) {
+                let headers = {};
+                headers['X-Requested-With'] = "XMLHttpRequest";
+
+                // var data = new FormData();
+                // data.append('e', e);
+
+                fetch("{{ url('/search-auto') }}?e=" + input, {
+                    headers: headers,
+                    method: "GET",
+                    // params : {a:345},
+                    credentials: "same-origin"
+                }).then((res) => {
+                    if (res.status !== 200)
+                        console.log('Failed to edit customer.');
+                    // console.log(res.clone().text());
+                    return res.json();
+                }).then((data) => {
+                    var content = ''
+                    autoSearch.style.display = 'block'
+                    data.map(function (value) {
+                        content += '<div class=\"search__auto-item\"> <a href = \"\" ><img src = \"{{ asset('public/uploads/truyen/') }}/'+value?.hinhanh+'\"><span >'+ value?.tentruyen +'</span> </a> </div>';
+                    })
+                    autoSearch.innerHTML = content 
+                    // autoSearch.style.display = 'block'
+                    // autoSearch.innerHTML = '<div class=\"search__auto-item\"> <a href = \"\" ><img src = \"{{ asset('public/uploads/truyen/dai-vuong-tha-mang.jpg') }}\"alt = \"\" ><span >'+ data[0]?.tentruyen +'</span> </a> </div>'
+                    // console.log(data);
+                    // console.log(data[0]?.tentruyen);
+                }).catch((e) => {
+                    console.log("Error! " + e);
+                });
+            };
+
+        })
+    </script>
+
+</body>
+
 </html>

@@ -45,7 +45,7 @@
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Nội dung</label>
-                <textarea name="noidung" id="" class="form-control" rows="5"></textarea>
+                <textarea name="noidung" id="" class="form-control"></textarea>
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Kích hoạt</label>
