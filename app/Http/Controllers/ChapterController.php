@@ -133,7 +133,7 @@ class ChapterController extends Controller
         $chapter->truyen_id = $data['truyen_id'];
 
 
-
+        $chapter->timestamps = false;
         $chapter->save();
         return redirect()->back()->with('status', 'Cập nhật chapter thành công.');
     }

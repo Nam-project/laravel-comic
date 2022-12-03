@@ -18,6 +18,7 @@
     {{-- <link rel="stylesheet" href="{{ asset('public/css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('public/js/app.js') }}"> --}}
 
+    
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
@@ -60,8 +61,8 @@
 
 
                     <div class="header__register-login col l-3 m-0 c-0">
-                        <a href="" class="header__register">Sign Up</a>
-                        <a href="" class="header__login">Sign In</a>
+                        <a href="{{ route('register') }}" class="header__register">Sign Up</a>
+                        <a href="{{ route('login') }}" class="header__login">Sign In</a>
                     </div>
                     {{-- btn mobile --}}
                     <label for="nav__mobile-input" class="menu-btn col l-0 m-1 c-1">
@@ -196,8 +197,11 @@
         const searchInput = document.getElementById('search-input')
         const autoSearch = $('.search-autocomplete')
 
-        searchInput.addEventListener('keyup', () => {
+        searchInput.addEventListener('input', () => {
             let input = searchInput.value
+            while (input.startsWith(" ")) {
+               input = input.substring(1)
+            }
             if (input.length) {
                 let headers = {};
                 headers['X-Requested-With'] = "XMLHttpRequest";
@@ -219,7 +223,7 @@
                     var content = ''
                     autoSearch.style.display = 'block'
                     data.map(function (value) {
-                        content += '<div class=\"search__auto-item\"> <a href = \"\" ><img src = \"{{ asset('public/uploads/truyen/') }}/'+value?.hinhanh+'\"><span >'+ value?.tentruyen +'</span> </a> </div>';
+                        content += `<div class="search__auto-item"> <a href = "{{url('doc-truyen') }}/`+value?.slugtruyen+`" ><img src = "{{ asset('public/uploads/truyen/') }}/`+value?.hinhanh+`"><span >`+ value?.tentruyen +`</span> </a> </div>`;
                     })
                     autoSearch.innerHTML = content 
                     // autoSearch.style.display = 'block'
@@ -229,10 +233,14 @@
                 }).catch((e) => {
                     console.log("Error! " + e);
                 });
-            };
+            }else {
+                autoSearch.style.display = 'none'
+                autoSearch.innerHTML = ''
+            }
 
         })
     </script>
+    
 
 </body>
 

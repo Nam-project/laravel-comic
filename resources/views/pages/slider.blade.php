@@ -4,7 +4,7 @@
         @foreach ($slider as $key => $value)
             <div class="card swiper-slide">
                 <div class="card__content">
-                    <div class="card__image">
+                    <a href="{{url('doc-truyen/'.$value->slugtruyen)}}" class="card__image">
                         <img src="{{ asset('public/uploads/truyen/'.$value->hinhanh) }}" alt="">
                         <div class="card__image-information">
                             <div class="card__image-view">
@@ -15,8 +15,8 @@
                             </div>
 
                         </div>
-                    </div>
-                    <div class="card__name">{{$value->tentruyen}}</div>
+                    </a>
+                    <a href="{{url('doc-truyen/'.$value->slugtruyen)}}" class="card__name">{{$value->tentruyen}}</a>
                     <div class="card__chap">
                         <div class="card__chap-name">Chap 607</div>
                         <div class="card__chap-time">3 giờ trước</div>

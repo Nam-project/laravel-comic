@@ -9,7 +9,8 @@ class Chapter extends Model
 {
     use HasFactory;
 
-    public $timestamps = false;
+    // const UPDATED_AT = 'update_time';
+    public $timestamps = true;
     protected $fillable = [
         'truyen_id', 'tieude', 'noidung', 'kichhoat', 'slug_chapter',
     ];

@@ -5,8 +5,10 @@
     <div class="">
         <ul class="breadcrumb">
             <li><a href="{{url('/')}}">Home</a></li>
-            {{-- <li><a href="{{url('danh-muc/'.$truyen->danhmuctruyen->slugdanhmuc)}}">{{$truyen->danhmuctruyen->tendanhmuc}}</a></li>
-            <li>{{$truyen->tentruyen}}</li> --}}
+            <li><a href="{{url('danh-muc/'.$breadcrumb->danhmuctruyen->slugdanhmuc)}}">{{$breadcrumb->danhmuctruyen->tendanhmuc}}</a></li>
+            <li><a href="{{url('doc-truyen/'.$breadcrumb->slugtruyen)}}">{{$breadcrumb->tentruyen}}</a></li>
+            <li>{{$chapter->tieude}}</li>
+
         </ul>
         <div class="nav__chapter">
             <a href="{{ url('xem-chapter/'.$backID.'/'.$backSlug) }}" class="chapter-btn {{$chapter->id == $minID->id ? 'inactive' : ''}}"><i class="fa-solid fa-angle-left"></i></a>

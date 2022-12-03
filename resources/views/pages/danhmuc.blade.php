@@ -18,11 +18,11 @@
                     @foreach ($truyen as $key => $value)
                         <div class="col l-3 m-4 c-6">
                             <div class="item">
-                                <div class="item__image">
+                                <a href="{{url('doc-truyen/'.$value->slugtruyen)}}" class="item__image">
                                     <img src="{{ asset('public/uploads/truyen/'.$value->hinhanh) }}" />
         
-                                </div>
-                                <div class="item__name"><a href="">{{$value->tentruyen}}</a></div>
+                                </a>
+                                <div class="item__name"><a href="{{url('doc-truyen/'.$value->slugtruyen)}}">{{$value->tentruyen}}</a></div>
                                 <div class="item__information">
                                     <div class="item__information-chap"><a href="">Chap 600</a></div>
                                     <div class="item__information-time">7 giờ trước</div>
